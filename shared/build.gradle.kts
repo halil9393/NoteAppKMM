@@ -40,6 +40,14 @@ kotlin {
             implementation("com.squareup.sqldelight:native-driver:1.5.3")
         }
     }
+    task("testClasses")
+}
+
+sqldelight{
+    database("NoteDatabase"){
+        packageName = "com.example.noteappkmm.database"
+        sourceFolders = listOf("sqldelight")
+    }
 }
 
 android {
