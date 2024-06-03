@@ -36,7 +36,7 @@ class NoteListViewModel @Inject constructor(
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), NoteListState())
 
     init {
-        viewModelScope.launch {
+        /*viewModelScope.launch {
             (1..10).forEach{
                 noteDataSource.insertNote(
                     Note(
@@ -48,7 +48,7 @@ class NoteListViewModel @Inject constructor(
                     )
                 )
             }
-        }
+        }*/
     }
 
     fun loadNotes(){
